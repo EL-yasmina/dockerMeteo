@@ -9,6 +9,9 @@ jobs:
     steps:
       - checkout
       # Replace this with a real test runner invocation
+       - run:
+          name: install test dependencies
+          command: pip install pytest pytest-cov
       - run:
           name: Run tests
           command: pytest
